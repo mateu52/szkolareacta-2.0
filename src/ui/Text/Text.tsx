@@ -4,7 +4,7 @@ type Props = {
 
 export const Text = ({children}: Props) => {
     return (
-        <div>
+        <div className="font-serif ml-2 mt-2">
             <p>{children}</p>
         </div>
     )
