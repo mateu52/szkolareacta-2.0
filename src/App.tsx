@@ -1,5 +1,6 @@
 import { } from 'react';
 import { Button, Text } from './ui/';
+import { Paragraph } from './ui/Paragraph';
 
 function App() {
 
@@ -19,7 +20,12 @@ function App() {
         className='text-red-600 border-double border-4 p-4 m-1 bg-red-50'
         label='Click me' 
       />
+      <Button 
+        label='disable true'  className='border-4 p-4 m-1 disabled:bg-slate-400' disabled={true}
+      />
       <Text>Tekst przykładowy.</Text>
+      <Paragraph contentEditable={true} className='ml-4 pt-5 text-m font-extrabold' >ComponentProps</Paragraph>
+      <Paragraph className='ml-4 text-2xl underline font-extralight	' >ComponentProps 2</Paragraph>
     </div>
   )
 }

@@ -1,15 +1,15 @@
-import { MouseEventHandler } from "react";
+import { type ComponentProps } from "react";
 
 type Props = {
     label: string;
-    onClick?: MouseEventHandler<HTMLButtonElement>;
+    //onClick?: MouseEventHandler<HTMLButtonElement>;
     className?: string;
-}
+} & ComponentProps<"button">;
 
-export const Button = ({ label, onClick, className, ...rest}: Props) => {
+export const Button = ({ label, className, ...rest}: Props) => {
     return ( 
-        <button className={`${className}`}
-            onClick={onClick}
+        <button 
+            className={`${className}`}
             {...rest}
             >
             {label}
