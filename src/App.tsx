@@ -24,8 +24,8 @@ function App() {
         label='disable true'  className='border-4 p-4 m-1 disabled:bg-slate-400' disabled={true}
       />
       <Text>Tekst przykładowy.</Text>
-      <Paragraph contentEditable={true} className='ml-4 pt-5 text-m font-extrabold' >ComponentProps</Paragraph>
-      <Paragraph className='ml-4 text-2xl underline font-extralight	' >ComponentProps 2</Paragraph>
+      <Paragraph contentEditable={true} className='pt-5 text-m font-extrabold' >ComponentProps</Paragraph>
+      <Paragraph className='text-2xl underline font-extralight	' >ComponentProps 2</Paragraph>
     </div>
   )
 }

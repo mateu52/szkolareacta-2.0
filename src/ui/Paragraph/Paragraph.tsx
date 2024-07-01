@@ -1,4 +1,5 @@
 import { type ComponentProps } from "react";
+import { Cn } from "../utils/cn";
 
 type Props = {
     children: string;
@@ -7,7 +8,7 @@ type Props = {
 export const Paragraph = ({ children, className, ...rest }: Props) => {
     return ( 
         <p
-            className={className}
+            className={Cn('ml-4',className)}
             {...rest}
             >
             {children}
