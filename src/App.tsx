@@ -25,7 +25,7 @@ function App() {
       />
       <Text>Tekst przykładowy.</Text>
       <Paragraph contentEditable={true} className='pt-5 text-m font-extrabold' >ComponentProps</Paragraph>
-      <Paragraph className='text-2xl underline font-extralight	' >ComponentProps 2</Paragraph>
+      <Paragraph className='text-2xl underline font-extralight bg-red-400	' >ComponentProps 2</Paragraph>
     </div>
   )
 }
