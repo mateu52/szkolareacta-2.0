@@ -9,3 +9,6 @@ mozna w nim uzywac typescript
 jest możliwe renderowanie w tle po stronie serwera
 szybszy, posiada wiecej możliwości i bardziej przejrzysty niż sam javascript i html
 posiada mozliwośc uzywania skladni JSX - javascript+ html
+
+typ ComponentProps jest typem generycznym
+ułatwia wpisywanie dodatkowych propsów w trakcie uzycia komponentu bez potrzebny deklarowania ich w funkcji

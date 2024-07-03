@@ -1,12 +1,14 @@
 import { } from 'react';
 import { Button, Text } from './ui/';
 import { Paragraph } from './ui/Paragraph';
+import { Timer } from './ui/Timer';
 
 function App() {
 
   return (
     <div>
       <h1 className='bg-green-200 p-2'>Hello Vite</h1>
+      <Timer />
       <Button 
         className='text-blue-500 border-double border-4 p-4 m-1 bg-blue-50'
         label='Click me' 

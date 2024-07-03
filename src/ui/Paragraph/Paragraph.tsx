@@ -1,7 +1,7 @@
 import { type ComponentProps } from "react";
 import { Cn } from "../utils/cn";
 
-type Props = {
+export type Props = {
     children: string;
 } & ComponentProps<"p">;
 
