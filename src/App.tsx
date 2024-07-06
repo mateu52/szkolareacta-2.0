@@ -2,12 +2,16 @@ import { } from 'react';
 import { Button, Text } from './ui/';
 import { Paragraph } from './ui/Paragraph';
 import { Timer } from './ui/Timer';
+import { Generator } from './components/Generator';
 
 function App() {
   return (
     <div>
       <h1 className='bg-green-200 p-2'>Hello Vite</h1>
-      <Timer />
+      <Generator />
+      
+      
+      {/* <Timer />
       <Button 
         className='text-blue-500 border-double border-4 p-4 m-1 bg-blue-50'
         label='Click me' 
@@ -26,7 +30,7 @@ function App() {
       />
       <Text>Tekst przykładowy.</Text>
       <Paragraph contentEditable={true} className='pt-5 text-m font-extrabold' >ComponentProps</Paragraph>
-      <Paragraph className='text-2xl underline font-extralight bg-red-400	' >ComponentProps 2</Paragraph>
+      <Paragraph className='text-2xl underline font-extralight bg-red-400	' >ComponentProps 2</Paragraph> */}
     </div>
   )
 }
