@@ -4,7 +4,6 @@ import { Paragraph } from './ui/Paragraph';
 import { Timer } from './ui/Timer';
 
 function App() {
-
   return (
     <div>
       <h1 className='bg-green-200 p-2'>Hello Vite</h1>
