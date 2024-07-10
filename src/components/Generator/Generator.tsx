@@ -10,12 +10,14 @@ type Selected = {
 
 export const Generator = () => {
     const select = useRef<HTMLSelectElement>(null)
+    const inputText = useRef<HTMLInputElement>(null)
     const [selectedOption, setSelectedOption ] = useState<Selected>({
         button: true,
         text: true,
         header: true
         }
     );
+    console.log(inputText)
     const handleOption = () => {
         const id = select.current?.value as keyof Selected;
         if(id){
@@ -47,9 +49,14 @@ export const Generator = () => {
             </select>
             <button onClick={handleOption}>wybierz</button>
             <div>
-                <Button label="Button component - click me" hidden={selectedOption.button} />
-                <Text hidden={selectedOption.text} >Text Component...lorem ipsum</Text>
-                <Header hidden={selectedOption.header} />
+                {(selectedOption.text === false) &&
+                    <input ref={inputText}></input>
+                }
+            </div>
+            <div>
+                <Button label="Button component - click me" hidden={selectedOption.button} className="ml-2" />
+                <Text hidden={selectedOption.text} >{selectedOption.text === false ? inputText.current?.value  ?? `Text Component...lorem ipsum`: null} </Text>
+                <Header hidden={selectedOption.header} className="bg-red-300"/>
             </div>
         </div>
     )

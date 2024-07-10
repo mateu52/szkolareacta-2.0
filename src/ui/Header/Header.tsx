@@ -7,7 +7,11 @@ type Props = {
 export const Header = ({...rest}: Props) => {
     return(
         <div {...rest}>
-            <p>header</p>
+            <ul className="flex mt-2 mb-2 pt-2 pb-2">
+                <li className="ml-2 mr-1">Głowna</li>
+                <li className="ml-2 mr-1">Sklep</li>
+                <li className="ml-2 mr-1">O mnie</li>
+            </ul>
         </div>
     )
 }

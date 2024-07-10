@@ -1,7 +1,7 @@
 import { ComponentProps } from "react";
 
 type Props = {
-    children: string;
+    children: React.ReactNode;
 } & ComponentProps<"p">
 
 export const Text = ({children, ...rest}: Props) => {
