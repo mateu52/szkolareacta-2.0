@@ -1,6 +1,7 @@
 import { useRef, useState } from "react"
 import { Button, Text } from "../../ui"
 import { Header } from "../../ui/Header"
+import { TextCode } from "../../ui/Text"
 
 type Selected = {
     button: boolean,
@@ -41,7 +42,7 @@ export const Generator = () => {
     
     return (
         <div>
-            <p>Wybierz komponent:</p>
+            <p className="font-bold">Wybierz komponent:</p>
             <select ref={select}>
                 <option value="button">Button</option>
                 <option value="text">Text</option>
@@ -50,13 +51,26 @@ export const Generator = () => {
             <button onClick={handleOption}>wybierz</button>
             <div>
                 {(selectedOption.text === false) &&
-                    <input ref={inputText}></input>
+                <div className="ml-2 mt-2">
+                    <input className="bg-gray-100 mr-1 w-24" ref={inputText}></input>
+                    <button onClick={handleOption}>zmień tekst</button>
+                    </div>
                 }
             </div>
             <div>
                 <Button label="Button component - click me" hidden={selectedOption.button} className="ml-2" />
                 <Text hidden={selectedOption.text} >{selectedOption.text === false ? inputText.current?.value  ?? `Text Component...lorem ipsum`: null} </Text>
                 <Header hidden={selectedOption.header} className="bg-red-300"/>
+            </div>
+            <div>
+                <p>kod komponentu:</p>
+                {
+                    selectedOption.button === false ? 
+                    <div>
+                        <TextCode />
+                    </div>
+                    : null
+                }
             </div>
         </div>
     )
