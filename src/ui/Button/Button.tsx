@@ -6,13 +6,32 @@ type Props = {
     className?: string;
 } & ComponentProps<"button">;
 
+
 export const Button = ({ label, className, ...rest}: Props) => {
     return ( 
         <button 
-            className={`${className}`}
+            className={`bg-rose-50 ${className}`}
             {...rest}
             >
             {label}
         </button>
+    )
+}
+
+export const ButtonCode = () => {
+    const code = `
+        <button 
+            className={\`\${className}\`}
+            {...rest}
+            >
+            {label}
+        </button>
+    `
+    return (
+        <pre>
+            <code>
+                {code}
+            </code>
+        </pre>
     )
 }

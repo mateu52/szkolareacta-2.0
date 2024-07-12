@@ -1,1 +1,1 @@
-export { Text, TextCode } from './Text'
+export { Text } from './Text'

@@ -1,7 +1,7 @@
 import { } from 'react';
-import { Button, Text } from './ui/';
-import { Paragraph } from './ui/Paragraph';
-import { Timer } from './ui/Timer';
+//import { Button, Text } from './ui/';
+//import { Paragraph } from './ui/Paragraph';
+//import { Timer } from './ui/Timer';
 import { Generator } from './components/Generator';
 
 function App() {

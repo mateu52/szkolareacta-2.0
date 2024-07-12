@@ -1,2 +1,3 @@
 export { Text } from './Text'
-export { Button } from './Button'
+export { Button, ButtonCode } from './Button'
+export { Header, HeaderCode} from './Header'
