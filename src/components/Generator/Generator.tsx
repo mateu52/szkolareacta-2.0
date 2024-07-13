@@ -11,6 +11,7 @@ type Selected = {
 export const Generator = () => {
     const select = useRef<HTMLSelectElement>(null)
     const inputText = useRef<HTMLInputElement>(null)
+    const [ showCode, setShowCode ] = useState(false)
     const [selectedOption, setSelectedOption ] = useState<Selected>({
         button: true,
         text: true,
@@ -36,6 +37,7 @@ export const Generator = () => {
 
                 return newState;
             });
+        setShowCode(true)
         }
     }
     
@@ -61,7 +63,8 @@ export const Generator = () => {
                 <Text hidden={selectedOption.text} >{selectedOption.text === false ? inputText.current?.value  ?? `Text Component...lorem ipsum`: null} </Text>
                 <Header hidden={selectedOption.header} className="bg-red-300"/>
             </div>
-            <div className="ml-2 mt-4 pt-3 bg-slate-900 text-white w-2/3 h-80 mr-20 clearfix">
+            {showCode? 
+                <div className="ml-2 mt-4 pt-3 bg-slate-900 text-white w-2/3 h-80 mr-20 clearfix">
                 <p className="ml-4 pt-2 bg-gray-400 text-gray-800 w-32 h-10 ">kod komponentu:</p>
                 {
                     selectedOption.button === false ? 
@@ -92,7 +95,10 @@ export const Generator = () => {
                 }
                 
                 
-            </div>
+                </div>
+            
+            : null}
+                
         </div>
     )
 }
