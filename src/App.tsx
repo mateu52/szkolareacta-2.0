@@ -3,13 +3,33 @@ import { } from 'react';
 //import { Paragraph } from './ui/Paragraph';
 //import { Timer } from './ui/Timer';
 import { Generator } from './components/Generator';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { Layout } from './ui/Layout';
+import { Paragraph } from './ui/Paragraph';
+
+const router = createBrowserRouter([
+  {
+    path:"/",
+    element: <Layout />,
+    children: [
+      {
+        path: "/Generator",
+        element: <Generator />
+      },
+      {
+        path: "/form",
+        element: <Paragraph>Parag...</Paragraph>
+      }
+    ]
+  }
+])
 
 function App() {
   return (
     <div>
-      <h1 className='bg-green-200 p-2'>Hello Vite</h1>
-      <Generator />
-      
+      <RouterProvider router={router} fallbackElement={<p>Initial Load..</p>} />
+      {/* <h1 className='bg-green-200 p-2'>Hello Vite</h1> */}
+   {/* zad1 mod2   <Generator /> */}
       
       {/* <Timer />
       <Button 
