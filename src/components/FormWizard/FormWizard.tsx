@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Form1 } from "./Form1of2";
+import { Form1, Form2, FormResume } from './index'
 
 export const FormWizard = () => {
     const [ name, setName ] = useState<string>('');
@@ -11,7 +11,13 @@ export const FormWizard = () => {
 
     return(
         <div>
-            {site === 0 ? <Form1 /> : null}
+            {site === 0 ? <Form1 setName={setName} setSurname={setSurname} /> : null}
+            {site === 1 ? <Form2 /> : null}
+            {site === 2 ? <FormResume /> : null }
+            <div>
+                <p>Imię: {name}</p>
+                <p>Nazwisko: {surname}</p>
+            </div>
         </div>
     )
 }
