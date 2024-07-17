@@ -1,4 +1,5 @@
 import { SubmitHandler, useForm } from "react-hook-form";
+import { Input } from "../../ui/Input";
 
 type FormData = {
     date: string;
@@ -9,14 +10,16 @@ export const Form2 = () => {
     const { register, handleSubmit } = useForm<FormData>();
 
     const onSubmit:SubmitHandler<FormData> = data => {
+        
         console.log(data)
     }
 
     return (
         <div>
             <form onSubmit={handleSubmit(onSubmit)}>
-                <label>Podaj date urodzenia:</label>
-                <input {...register("date", {required: true})} />
+                <Input label="data:" 
+                    {...register('date')}
+                />
                 <label>Podaj hobby:</label>
                 <input {...register("hobby", {required: true})} />
                 <input type="submit" />

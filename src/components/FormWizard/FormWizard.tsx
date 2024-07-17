@@ -7,7 +7,7 @@ export const FormWizard = () => {
     const [ birthday, setBirthday ] = useState<string>('');
     const [ hobby, setHobby ] = useState<string>('');
 
-    const [ site, setSite ] = useState<number>(0)
+    const [ site, setSite ] = useState<number>(1)
 
     return(
         <div>
