@@ -2,27 +2,40 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { Input } from "../../ui/Input";
 
 type FormData = {
-    date: string;
+    birthday: string;
     hobby: string;
 }
-
-export const Form2 = () => {
-    const { register, handleSubmit } = useForm<FormData>();
+type FormProps = {
+    formData: {
+        birthday: string;
+        hobby: string;
+    };
+    handleChange: (key: string, value: string) => void;
+    nextStep: () => void;
+    prevStep: () => void;
+};
+export const Form2: React.FC<FormProps> = ({ formData, handleChange, nextStep, prevStep }) => {
+    const { register, handleSubmit } = useForm<FormData>({
+        defaultValues: formData
+    });
 
     const onSubmit:SubmitHandler<FormData> = data => {
-        
-        console.log(data)
+        handleChange('birthday', data.birthday);
+        handleChange('hobby', data.hobby);
+        nextStep();
     }
 
     return (
         <div>
             <form onSubmit={handleSubmit(onSubmit)}>
-                <Input label="data:" 
-                    {...register('date')}
+                <Input label="data urodzenia:" 
+                    {...register('birthday')}
                 />
-                <label>Podaj hobby:</label>
-                <input {...register("hobby", {required: true})} />
-                <input type="submit" />
+                <Input label="podaj hobby:" 
+                    {...register('hobby')}
+                />
+                <button type="button" onClick={prevStep}>Wstecz</button>
+                <input type="submit" value="Dalej" />
             </form>
         </div>
     )

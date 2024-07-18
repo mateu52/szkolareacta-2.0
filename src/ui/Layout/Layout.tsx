@@ -4,7 +4,7 @@ export const Layout = () => {
     return(
         <>
             <nav>
-                <ul>
+                <ul className="flex pt-1 ml-2">
                     <li>
                         <Link to="/Generator">Home</Link>
                     </li>
