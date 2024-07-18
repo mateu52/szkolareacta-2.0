@@ -10,7 +10,7 @@ type Props = {
 export const Button = ({ label, className, ...rest}: Props) => {
     return ( 
         <button 
-            className={`bg-rose-50 ${className}`}
+            className={`bg-gray-100 p-2 ${className}`}
             {...rest}
             >
             {label}
