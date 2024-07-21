@@ -5,8 +5,8 @@ import { } from 'react';
 import { Generator } from './components/Generator';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Layout } from './ui/Layout';
-import { Paragraph } from './ui/Paragraph';
 import { FormWizard } from './components/FormWizard';
+import { DynamicForm } from './components/DynamicForm';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: "/form",
         element: <FormWizard />
+      },
+      {
+        path: "/dynamicform",
+        element: <DynamicForm />
       }
     ]
   }

@@ -8,8 +8,11 @@ export const Layout = () => {
                     <li className="mr-2 p-1 bg-amber-200">
                         <Link to="/Generator">Home</Link>
                     </li>
-                    <li className="p-1 bg-red-200">
+                    <li className="mr-2 p-1 bg-red-200">
                         <Link to="/form">Formularz</Link>
+                    </li>
+                    <li className="p-1 bg-red-200">
+                        <Link to="/dynamicform">Dynamiczny Formularz</Link>
                     </li>
                 </ul>
             </nav>

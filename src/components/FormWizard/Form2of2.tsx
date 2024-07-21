@@ -20,6 +20,7 @@ export const Form2: React.FC<FormProps> = ({ formData, handleChange, nextStep, p
         defaultValues: formData
     });
 
+
     const onSubmit:SubmitHandler<FormData> = data => {
         handleChange('birthday', data.birthday);
         handleChange('hobby', data.hobby);

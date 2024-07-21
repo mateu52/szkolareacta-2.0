@@ -34,7 +34,7 @@ export const FormWizard = () => {
             {site === 1 ? <Form2   formData={formData} handleChange={handleChange} nextStep={nextStep} prevStep={prevStep} /> : null}
             {site === 2 ? <FormResume formData={formData} submitData={submitData} prevStep={prevStep} /> : null }
             <div>
-                
+                <p> imie: {formData.name}</p>
             </div>
         </div>
     )
