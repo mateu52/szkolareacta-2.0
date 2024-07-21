@@ -19,8 +19,6 @@ type FormProps = {
 export const Form1: React.FC<FormProps> = ({formData, handleChange, nextStep}) => {
     const { register, handleSubmit } = useForm<FormData>({
         defaultValues: formData,
-        resolver: zodResolver(nameSchema),
-        mode: 'onBlur'
     });
     
     const handleBlur = async (e: React.FocusEvent<HTMLInputElement>) => {
