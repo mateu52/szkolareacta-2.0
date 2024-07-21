@@ -23,7 +23,8 @@ export const Form1: React.FC<FormProps> = ({formData, handleChange, nextStep}) =
     
     const handleBlur = async (e: React.FocusEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
-
+        const timestamp = new Date().toISOString();
+        console.log(timestamp)
         // Walidacja pola z użyciem .safeParse
         const result = nameSchema.safeParse({ [name]: value });
         if (!result.success) {
