@@ -2,7 +2,7 @@ import { SubmitHandler, useForm } from "react-hook-form"
 import { Input } from "../../ui/Input";
 import { Button } from "../../ui";
 import { nameSchema } from "../../zod/validationSchemas";
-import { zodResolver } from "@hookform/resolvers/zod";
+//import { zodResolver } from "@hookform/resolvers/zod";
 
 type FormData = {
     name: string;

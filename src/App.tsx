@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Layout } from './ui/Layout';
 import { FormWizard } from './components/FormWizard';
 import { DynamicForm } from './components/DynamicForm';
+import { ComponentSort} from './ui';
 
 const router = createBrowserRouter([
   {
@@ -28,11 +29,13 @@ const router = createBrowserRouter([
     ]
   }
 ])
+const users = [{ id: 1, nickname: 'john', age: 45 }, { id: 2, nickname: 'olivier', age: 32 }, { id: 3, nickname: 'macgyver', age: 65 }];
 
 function App() {
   return (
     <div>
       <RouterProvider router={router} fallbackElement={<p>Initial Load..</p>} />
+      <ComponentSort users={ users } sort="up" />  {/* sort=='id'|'up'|'down' */}
       {/* <h1 className='bg-green-200 p-2'>Hello Vite</h1> */}
    {/* zad1 mod2   <Generator /> */}
       
